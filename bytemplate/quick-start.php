@@ -15,6 +15,10 @@ try {
     // 此块代码中的$approvers仅用于快速发起一份合同样例，非正式对接用
     $personName = "***********"; // 个人签署方的姓名
     $personMobile = "***********"; // 个人签署方的手机号
+    $proxyOrganizationName = "我的企业名称";
+
+    $loginResp = CreateConsoleLoginUrl($proxyOrganizationName);
+
     $approvers = [];
     array_push($approvers, BuildPersonFlowCreateApprover($personName, $personMobile));
 
@@ -24,6 +28,11 @@ try {
     // Step 2
     // 发起合同
     $resp = CreateFlowByTemplateDirectly(Config::templateId, $flowName, $approvers);
+
+    // 返回控制台登录url
+    print_r("您的控制台入口为：\r\n");
+    print_r($loginResp->ConsoleUrl);
+    print_r("\r\n\r\n");
 
     // 返回合同Id
     print_r("您创建的合同id为：\r\n");

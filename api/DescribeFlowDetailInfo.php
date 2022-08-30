@@ -22,3 +22,12 @@ function DescribeFlowDetailInfo($flowIds)  {
 
     return $resp;
 }
+
+// 查询模板调用样例
+try {
+    $flowId = '********************************';
+    $resp = DescribeFlowDetailInfo(array($flowIds));
+    print_r($resp);
+} catch (TencentCloudSDKException $e) {
+    echo $e;
+}

@@ -4,6 +4,7 @@ require_once(__DIR__ . '/./Common.php');
 require_once(__DIR__ . '/../config.php');
 
 use TencentCloud\Essbasic\V20210526\Models\DescribeTemplatesRequest;
+use TencentCloud\Common\Exception\TencentCloudSDKException;
 
 
 function DescribeTemplates($templateId)  {
@@ -22,4 +23,14 @@ function DescribeTemplates($templateId)  {
 
     return $resp;
 
+}
+
+
+// 查询模板调用样例
+try {
+    $templateId = '********************************';
+    $resp = DescribeTemplates($templateId);
+    print_r($resp);
+} catch (TencentCloudSDKException $e) {
+    echo $e;
 }
