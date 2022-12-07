@@ -1,5 +1,5 @@
 {
   "require": {
-    "tencentcloud/essbasic": "^3.0"
+    "tencentcloud/tencentcloud-sdk-php": "^3.0"
   }
 }

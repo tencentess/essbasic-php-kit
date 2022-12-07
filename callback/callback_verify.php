@@ -15,7 +15,7 @@ $hash = hash_hmac('sha256', $payload, $secretToken);
 //echo $hash == $signFromHeader;
 
 //3. 如果验证通过，继续处理。如果不通过，忽略该请求
-var_dump($hash == $signFromHeader);
+var_dump('sha256='.$hash == $signFromHeader);
 
 
 

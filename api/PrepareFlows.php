@@ -3,33 +3,35 @@ require_once(__DIR__ . '/../vendor/autoload.php');
 require_once(__DIR__ . '/./Common.php');
 require_once(__DIR__ . '/../config.php');
 
-use TencentCloud\Essbasic\V20210526\Models\CreateFlowsByTemplatesRequest;
+use TencentCloud\Essbasic\V20210526\Models\PrepareFlowsRequest;
 use TencentCloud\Essbasic\V20210526\Models\FlowInfo;
 use TencentCloud\Essbasic\V20210526\Models\FlowApproverInfo;
 
 
-function CreateFlowsByTemplates($flowInfos)  {
+function PrepareFlows($flowInfos, $jumpUrl)  {
     // 构造客户端调用实例
     $client = GetClientInstance(Config::secretId, Config::secretKey, Config::endPoint);
 
     // 实例化一个请求对象,每个接口都会对应一个request对象
-    $req = new CreateFlowsByTemplatesRequest();
+    $req = new PrepareFlowsRequest();
 
     $agent = GetAgent();
     $req->setAgent($agent);
-    $req->setFlowInfos($flowInfos);
 
-    $resp = $client->CreateFlowsByTemplates($req);
+    $req->setFlowInfos($flowInfos);
+    $req->setJumpUrl($jumpUrl);
+
+
+    $resp = $client->PrepareFlows($req);
 
     return $resp;
-
 }
 
-// 根据模板生成流程
+// 准备待发起文件
 try {
 
     $templateId = Config::templateId;
-    $flowName = "我的第一份合同";
+    $flowName = "我的第一个合同";
 
     // 构造签署人
     // 此块代码中的$approvers仅用于快速发起一份合同样例，非正式对接用
@@ -54,7 +56,9 @@ try {
     $flowInfo->setFlowType("");
     $flowInfo->setFlowApprovers($approvers);
 
-    $resp = CreateFlowsByTemplates(array($flowInfo));
+    $jumpUrl = "https://www.qq.com";
+
+    $resp = PrepareFlows(array($flowInfo), $jumpUrl);
     print_r($resp);
 } catch (TencentCloudSDKException $e) {
     echo $e;

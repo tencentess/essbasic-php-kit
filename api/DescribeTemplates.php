@@ -28,7 +28,7 @@ function DescribeTemplates($templateId)  {
 
 // 查询模板调用样例
 try {
-    $templateId = '********************************';
+    $templateId = Config::templateId;
     $resp = DescribeTemplates($templateId);
     print_r($resp);
 } catch (TencentCloudSDKException $e) {

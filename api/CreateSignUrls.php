@@ -23,3 +23,13 @@ function CreateSignUrls($flowIds)  {
     return $resp;
 
 }
+
+try {
+
+    $flowId = "****";
+
+    $resp = CreateSignUrls(array($flowId));
+    print_r($resp);
+} catch (TencentCloudSDKException $e) {
+    echo $e;
+}

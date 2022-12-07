@@ -14,6 +14,7 @@ function CreateConsoleLoginUrl($proxyOrganizationName)  {
     $req = new CreateConsoleLoginUrlRequest();
 
     $agent = GetAgent();
+    $agent->setProxyAppId("");
     $req->setAgent($agent);
     $req->setProxyOrganizationName($proxyOrganizationName);
 

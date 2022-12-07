@@ -3,6 +3,7 @@ require_once(__DIR__ . '/../vendor/autoload.php');
 require_once(__DIR__ . '/./Common.php');
 require_once(__DIR__ . '/../config.php');
 
+use TencentCloud\Common\Exception\TencentCloudSDKException;
 use TencentCloud\Essbasic\V20210526\Models\UploadFilesRequest;
 use TencentCloud\Essbasic\V20210526\Models\UploadFile;
 
@@ -37,4 +38,25 @@ function UploadFiles($fileBase64, $filename)  {
 
     return $resp;
 
+}
+
+// 使用文件创建合同
+try {
+    //文件流
+
+    // 定义文件所在的路径
+    $filePath = __DIR__ . "/../testdata/电子签测试合同.docx";
+
+    $handle = fopen($filePath, "rb");
+    $contents = fread($handle, filesize ($filePath));
+    fclose($handle);
+    $fileBase64 = chunk_split(base64_encode($contents));
+    //文件id, 从UploadFile 获取
+    $fileName = "测试文件合同";
+
+
+    $resp = UploadFiles($fileBase64, $fileName);
+    print_r($resp);
+} catch (TencentCloudSDKException $e) {
+    echo $e;
 }
