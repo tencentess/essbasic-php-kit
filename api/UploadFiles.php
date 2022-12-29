@@ -7,7 +7,10 @@ use TencentCloud\Common\Exception\TencentCloudSDKException;
 use TencentCloud\Essbasic\V20210526\Models\UploadFilesRequest;
 use TencentCloud\Essbasic\V20210526\Models\UploadFile;
 
-
+// UploadFiles 用于生成pdf资源编号（FileIds）来配合“用PDF创建流程”接口使用，使用场景可详见“用PDF创建流程”接口说明。
+// 调用时需要设置Domain, 正式环境为 file.ess.tencent.cn
+// 测试环境为 https://file.test.ess.tencent.cn
+// 详细参考 https://cloud.tencent.com/document/api/1420/71479
 function UploadFiles($fileBase64, $filename)  {
     // 构造客户端调用实例
     $client = GetClientInstance(Config::secretId, Config::secretKey, Config::fileServiceEndPoint);
@@ -15,16 +18,16 @@ function UploadFiles($fileBase64, $filename)  {
     // 实例化一个请求对象,每个接口都会对应一个request对象
     $req = new UploadFilesRequest();
 
+    // 应用相关信息，appid 和proxyappid 必填
     $agent = GetAgent();
     $req->setAgent($agent);
 
-    // 文件对应业务类型，用于区分文件存储路径：
-    // 1. TEMPLATE - 模板； 文件类型：.pdf/.html
-    // 2. DOCUMENT - 签署过程及签署后的合同文档 文件类型：.pdf/.html
-    // 3. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
+    /// 文件对应业务类型
+	// 1. TEMPLATE - 模板； 文件类型：.pdf/.doc/.docx/.html
+	// 2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.doc/.docx/.jpg/.png/.xls.xlsx/.html
     $req->setBusinessType("DOCUMENT");
 
-    // 上传文件内容
+    // 上传文件内容数组，最多支持20个文件
     $file = new UploadFile();
     // Base64编码后的文件内容
     $file->setFileBody($fileBase64);
