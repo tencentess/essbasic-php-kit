@@ -3,6 +3,7 @@ require_once(__DIR__ . '/../vendor/autoload.php');
 require_once(__DIR__ . '/../api/CreateFlowByFileDirectly.php');
 require_once(__DIR__ . '/./byfile.php');
 require_once(__DIR__ . '/../api/DescribeResourceUrlsByFlows.php');
+require_once(__DIR__ . '/../api/CreateConsoleLoginUrl.php');
 
 
 use TencentCloud\Common\Exception\TencentCloudSDKException;
@@ -14,7 +15,7 @@ use TencentCloud\Common\Exception\TencentCloudSDKException;
 	1. 通过CreateConsoleLoginUrl引导子客企业完成电子签的实名认证 - 子客企业在电子签配置印章等
 	2. 通过简单封装的CreateFlowByFileDirectly接口上传文件并快速发起一份合同，并得到签署链接
 	3. 在小程序签署合同，通过API下载合同
-基于具体业务上的参数调用，可以参考官网的接口说明 
+基于具体业务上的参数调用，可以参考官网的接口说明
 https://cloud.tencent.com/document/product/1420/61534
 每个API的封装在api目录下可以自己配合相关参数进行调用
 */
@@ -45,8 +46,8 @@ try {
     $approvers = [];
     array_push($approvers, BuildPersonApprover($personName, $personMobile));
 
-    /// 如果是正式接入，需使用这里注释的$approvers。请进入BuildApprovers函数内查看说明，构造需要的场景参数
-    /// $approvers = BuildApprovers();
+    // 请进入BuildApprovers函数内查看说明，构造需要的场景参数, 下面的参数提供了一些实例， 可以根据实际业务需要放入到approver中
+   //  $approvers = BuildApprovers();
 
     // 发起合同
     $resp = CreateFlowByFileDirectly($fileBase64, $flowName, $approvers);
