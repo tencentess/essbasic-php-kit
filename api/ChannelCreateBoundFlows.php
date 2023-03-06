@@ -6,7 +6,7 @@ require_once(__DIR__ . '/../config.php');
 use TencentCloud\Essbasic\V20210526\Models\ChannelCreateBoundFlowsRequest;
 
 // ChannelCreateBoundFlows
-// 此接口（ChannelCreateBoundFlows）用于渠道子客领取合同，经办人需要有相应的角色，领取后的合同不能重复领取。
+// 此接口（ChannelCreateBoundFlows）用于子客领取合同，经办人需要有相应的角色，领取后的合同不能重复领取。
 // 详细参考 https://cloud.tencent.com/document/api/1420/83118
 function ChannelCreateBoundFlows($flowIds)  {
     // 构造客户端调用实例

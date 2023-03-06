@@ -20,7 +20,7 @@ function ChannelCreateMultiFlowSignQRCode($templateId, $flowName, $maxFlowNum, $
     // 实例化一个请求对象,每个接口都会对应一个request对象
     $req = new ChannelCreateMultiFlowSignQRCodeRequest();
 
-    // 渠道应用相关信息。
+    // 第三方平台应用相关信息
 	// 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
     $agent = GetAgent();
     $req->setAgent($agent);
@@ -38,7 +38,7 @@ function ChannelCreateMultiFlowSignQRCode($templateId, $flowName, $maxFlowNum, $
     // 限制二维码用户条件
     $req->setRestrictions($restrictions);
     // 回调地址，最大长度1000个字符
-    // 不传默认使用渠道应用号配置的回调地址
+    // 不传默认使用第三方平台应用号配置的回调地址
     // 回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败
     $req->setCallbackUrl($callbackUrl);
 

@@ -9,7 +9,7 @@ use TencentCloud\Essbasic\V20210526\Models\RelieveInfo;
 use TencentCloud\Essbasic\V20210526\Models\ReleasedApprover;
 
 // ChannelCreateReleaseFlow
-// 渠道版发起解除协议，主要应用场景为：基于一份已经签署的合同，进行解除操作。
+// 第三方应用集成发起解除协议，主要应用场景为：基于一份已经签署的合同，进行解除操作。
 // 合同发起人必须在电子签已经进行实名。
 // 详细参考 https://cloud.tencent.com/document/api/1420/83461
 function ChannelCreateReleaseFlow($needRelievedFlowId, $reliveInfo, $ReleasedApprovers, $callbackUrl)  {
@@ -19,7 +19,7 @@ function ChannelCreateReleaseFlow($needRelievedFlowId, $reliveInfo, $ReleasedApp
     // 实例化一个请求对象,每个接口都会对应一个request对象
     $req = new ChannelCreateReleaseFlowRequest();
 
-    // 渠道应用相关信息。 
+    // 第三方平台应用相关信息
 	// 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
     $agent = GetAgent();
     $req->setAgent($agent);

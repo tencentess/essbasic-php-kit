@@ -42,7 +42,7 @@ function BuildPersonApprover($name, $mobile)
 
     // 签署人类型
     // PERSON-个人/自然人；
-    // ORGANIZATION-企业（企业签署方或模版发起时的企业静默签）；
+    // ORGANIZATION-企业（企业签署方或模板发起时的企业静默签）；
     // ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
     $approver->setApproverType("PERSON");
 
@@ -74,17 +74,17 @@ function BuildChannelOrganizationApprover($organizationName, $organizationOpenId
 
     // 签署人类型
 	// PERSON-个人/自然人；
-	// ORGANIZATION-企业（企业签署方或模版发起时的企业静默签）；
+	// ORGANIZATION-企业（企业签署方或模板发起时的企业静默签）；
 	// ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
     $approver->setApproverType("ORGANIZATION");
 
     // 企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传，最大长度64个字符；
     $approver->setOrganizationName($organizationName);
     // 如果签署方是子客企业，此处需要传子客企业的OrganizationOpenId
-	// 企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
+	// 企业签署方在同一第三方应用集成下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
     $approver->setOrganizationOpenId($organizationOpenId);
     // 如果签署方是子客企业，此处需要传子客企业经办人的OpenId
-	// 当签署方为同一渠道下的员工时，该字段若不指定，则发起【待领取】的流程
+	// 当签署方为同一平台下的员工时，该字段若不指定，则发起【待领取】的流程
 
     $approver->setName($approverName);
     $approver->setMobile($approverMobile);
@@ -143,7 +143,7 @@ function BuildServerSignApprover($organizationName)
 
     // 签署人类型
 	// PERSON-个人/自然人；
-	// ORGANIZATION-企业（企业签署方或模版发起时的企业静默签）；
+	// ORGANIZATION-企业（企业签署方或模板发起时的企业静默签）；
 	// ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
     $approver->setApproverType("ENTERPRISESERVER");
     $approver->setOrganizationName($organizationName);

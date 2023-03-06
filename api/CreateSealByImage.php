@@ -7,7 +7,7 @@ use TencentCloud\Common\Exception\TencentCloudSDKException;
 use TencentCloud\Essbasic\V20210526\Models\CreateSealByImageRequest;
 
 // CreateSealByImage
-// 渠道通过图片为子客代创建印章，图片最大5MB
+// 平台企业通过图片为子客代创建印章，图片最大5MB
 function CreateSealByImage($sealName, $sealImage)  {
     // 构造客户端调用实例
     $client = GetClientInstance(Config::secretId, Config::secretKey, Config::endPoint);
