@@ -1,6 +1,7 @@
 <?php
 require_once(__DIR__ . '/../vendor/autoload.php');
 
+// 回调消息验证签名
 
 // 回调消息体
 $payload = "**********";

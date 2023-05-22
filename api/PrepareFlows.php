@@ -44,8 +44,8 @@ try {
     // 构造签署人
     // 此块代码中的$approvers仅用于快速发起一份合同样例，非正式对接用
     $approvers = [];
-    $personName = "程龙"; // 个人签署方的姓名
-    $personMobile = "18768158110"; // 个人签署方的手机号
+    $personName = "**"; // 个人签署方的姓名
+    $personMobile = "***********"; // 个人签署方的手机号
     // 签署参与者信息
     // 个人签署方
     $approver = new FlowApproverInfo();

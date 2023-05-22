@@ -38,7 +38,7 @@ class Config
     // TemplateId 模板ID，电子签控制台模板模块获取，仅在通过模板发起时使用
     const templateId = "*******************";
 
-    // EndPoint API域名，现网使用 ess.tencentcloudapi.com
+    // EndPoint API域名，现网使用 essbasic.tencentcloudapi.com
     const endPoint = 'essbasic.test.ess.tencent.cn';
 
     // FileServiceEndPoint 文件服务域名，现网使用 file.ess.tencent.cn
