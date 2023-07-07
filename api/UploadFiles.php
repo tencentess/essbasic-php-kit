@@ -18,7 +18,7 @@ function UploadFiles($fileBase64, $filename)  {
     // 实例化一个请求对象,每个接口都会对应一个request对象
     $req = new UploadFilesRequest();
 
-    // 应用相关信息，appid 和proxyappid 必填
+    // 应用相关信息，AppId 和 ProxyOrganizationOpenId 必填
     $agent = GetAgent();
     $req->setAgent($agent);
 
