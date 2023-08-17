@@ -17,7 +17,7 @@ class Config
     // 非必需参数
     // 在子客企业开通电子签后，会生成唯一的子客应用Id（ProxyAppId）用于代理调用时的鉴权
 	// 在回调与跳转-电子签开通通知里会返回此数据ProxyAppId
-    const proxyAppId = '*****************';
+    const proxyAppId = '';
 
     // 道子客企业OpenId（OrganizationOpenId）：简称OrgOpenId，对应通用参数ProxyOrganizationOpenId。
 	// 是平台企业自定义，对于子客企业的唯一标识。
