@@ -14,7 +14,7 @@ use TencentCloud\Common\Exception\TencentCloudSDKException;
     2. 通过简单封装的CreateFlowByTemplateDirectly接口快速发起一份合同，并得到签署链接
     3. 在小程序签署合同，通过API下载合同
 基于具体业务上的参数调用，可以参考官网的接口说明 
-https://cloud.tencent.com/document/product/1420/61534
+
 每个API的封装在api目录下可以自己配合相关参数进行调用
 */
 try {

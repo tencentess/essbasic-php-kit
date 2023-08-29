@@ -6,9 +6,6 @@ require_once(__DIR__ . '/../config.php');
 use TencentCloud\Essbasic\V20210526\Models\ChannelGetTaskResultApiRequest;
 use TencentCloud\Common\Exception\TencentCloudSDKException;
 
-// ChannelGetTaskResultApi
-// 第三方应用集成查询转换任务状态
-// 详细参考 https://cloud.tencent.com/document/api/1420/78773
 function ChannelGetTaskResultApi($taskId)  {
     // 构造客户端调用实例
     $client = GetClientInstance(Config::secretId, Config::secretKey, Config::endPoint);
@@ -16,12 +13,9 @@ function ChannelGetTaskResultApi($taskId)  {
     // 实例化一个请求对象,每个接口都会对应一个request对象
     $req = new ChannelGetTaskResultApiRequest();
 
-    // 第三方平台应用相关信息
-	// 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
     $agent = GetAgent();
     $req->setAgent($agent);
 
-    // 任务Id，通过ChannelCreateConvertTaskApi接口获得
     $req->setTaskId($taskId);
 
     $resp = $client->ChannelGetTaskResultApi($req);

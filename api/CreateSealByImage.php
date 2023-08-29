@@ -6,8 +6,6 @@ require_once(__DIR__ . '/../config.php');
 use TencentCloud\Common\Exception\TencentCloudSDKException;
 use TencentCloud\Essbasic\V20210526\Models\CreateSealByImageRequest;
 
-// CreateSealByImage
-// 平台企业通过图片为子客代创建印章，图片最大5MB
 function CreateSealByImage($sealName, $sealImage)  {
     // 构造客户端调用实例
     $client = GetClientInstance(Config::secretId, Config::secretKey, Config::endPoint);
@@ -18,9 +16,8 @@ function CreateSealByImage($sealName, $sealImage)  {
     $agent = GetAgent();
     $req->setAgent($agent);
 
-    // 印章名称，最大长度不超过30字符
     $req->setSealName($sealName);
-    // 印章图片base64
+
     $req->setSealImage($sealImage);
 
     // 返回的resp是一个CreateSealByImageResponse的实例，与请求对象对应
