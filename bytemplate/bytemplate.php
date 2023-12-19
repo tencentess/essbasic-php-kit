@@ -75,7 +75,7 @@ function BuildServerSignFlowCreateApprover()
     // 企业静默签
     $approver = new FlowApproverInfo();
 
-    $approver->setApproverType("ENTERPRISESERVER");
+    $approver->setApproverType("ORGANIZATION");
 
     // 注：此时发起方会替换为接口调用的企业+经办人，所以不需要传签署方信息
     
