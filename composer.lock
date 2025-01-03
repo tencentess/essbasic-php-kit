@@ -478,16 +478,24 @@
         },
         {
             "name": "tencentcloud/tencentcloud-sdk-php",
-            "version": "3.0.780",
+            "version": "3.0.1294",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TencentCloud/tencentcloud-sdk-php.git",
+                "reference": "0bd1cac2fb832230c056e81f0e0656d6d56d8d19"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/tencentcloud/tencentcloud-sdk-php/3.0.780/tencentcloud-tencentcloud-sdk-php-3.0.780.zip",
-                "reference": "97200ac483805cd93b7b94d8aabe583c9fed1b1e",
+                "url": "https://api.github.com/repos/TencentCloud/tencentcloud-sdk-php/zipball/0bd1cac2fb832230c056e81f0e0656d6d56d8d19",
+                "reference": "0bd1cac2fb832230c056e81f0e0656d6d56d8d19",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "^6.3 || ^7.0",
                 "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5"
             },
             "type": "library",
             "autoload": {
@@ -498,6 +506,7 @@
                     "src/QcloudApi/QcloudApi.php"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -511,16 +520,20 @@
             ],
             "description": "TencentCloudApi php sdk",
             "homepage": "https://github.com/TencentCloud/tencentcloud-sdk-php",
-            "time": "2022-12-05T00:17:14+00:00"
+            "support": {
+                "issues": "https://github.com/TencentCloud/tencentcloud-sdk-php/issues",
+                "source": "https://github.com/TencentCloud/tencentcloud-sdk-php/tree/3.0.1294"
+            },
+            "time": "2025-01-02T20:07:27+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "platform": {},
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
 }

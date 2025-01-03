@@ -34,9 +34,7 @@ class ComposerStaticInite81f3188660cda4a4802d2f72185c2a2
     public static $prefixDirsPsr4 = array (
         'TencentCloud\\' => 
         array (
-            0 => __DIR__ . '/..' . '/tencentcloud/common/src/TencentCloud',
-            1 => __DIR__ . '/..' . '/tencentcloud/ess/src/TencentCloud',
-            2 => __DIR__ . '/..' . '/tencentcloud/essbasic/src/TencentCloud',
+            0 => __DIR__ . '/..' . '/tencentcloud/tencentcloud-sdk-php/src/TencentCloud',
         ),
         'Psr\\Http\\Message\\' => 
         array (
@@ -63,6 +61,7 @@ class ComposerStaticInite81f3188660cda4a4802d2f72185c2a2
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'QcloudApi' => __DIR__ . '/..' . '/tencentcloud/tencentcloud-sdk-php/src/QcloudApi/QcloudApi.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

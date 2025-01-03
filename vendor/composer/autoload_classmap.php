@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'QcloudApi' => $vendorDir . '/tencentcloud/tencentcloud-sdk-php/src/QcloudApi/QcloudApi.php',
 );

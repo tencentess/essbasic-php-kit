@@ -2,12 +2,12 @@
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.4.5",
-            "version_normalized": "7.4.5.0",
+            "version": "7.5.0",
+            "version_normalized": "7.5.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/guzzlehttp/guzzle/7.4.5/guzzlehttp-guzzle-7.4.5.zip",
-                "reference": "1dd98b0564cb3f6bd16ce683cb755f94c10fbd82",
+                "url": "https://mirrors.tencent.com/repository/composer/guzzlehttp/guzzle/7.5.0/guzzlehttp-guzzle-7.5.0.zip",
+                "reference": "b50a2a1251152e43f6a37f0fa053e730a67d25ba",
                 "shasum": ""
             },
             "require": {
@@ -22,10 +22,10 @@
                 "psr/http-client-implementation": "1.0"
             },
             "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.4.1",
+                "bamarni/composer-bin-plugin": "^1.8.1",
                 "ext-curl": "*",
                 "php-http/client-integration-tests": "^3.0",
-                "phpunit/phpunit": "^8.5.5 || ^9.3.5",
+                "phpunit/phpunit": "^8.5.29 || ^9.5.23",
                 "psr/log": "^1.1 || ^2.0 || ^3.0"
             },
             "suggest": {
@@ -33,11 +33,15 @@
                 "ext-intl": "Required for Internationalized Domain Name (IDN) support",
                 "psr/log": "Required for using the Log middleware"
             },
-            "time": "2022-06-20T22:16:13+00:00",
+            "time": "2022-08-28T15:39:27+00:00",
             "type": "library",
             "extra": {
+                "bamarni-bin": {
+                    "bin-links": true,
+                    "forward-command": false
+                },
                 "branch-alias": {
-                    "dev-master": "7.4-dev"
+                    "dev-master": "7.5-dev"
                 }
             },
             "installation-source": "dist",
@@ -105,12 +109,12 @@
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "1.5.1",
-            "version_normalized": "1.5.1.0",
+            "version": "1.5.2",
+            "version_normalized": "1.5.2.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/guzzlehttp/promises/1.5.1/guzzlehttp-promises-1.5.1.zip",
-                "reference": "fe752aedc9fd8fcca3fe7ad05d419d32998a06da",
+                "url": "https://mirrors.tencent.com/repository/composer/guzzlehttp/promises/1.5.2/guzzlehttp-promises-1.5.2.zip",
+                "reference": "b94b2807d85443f9719887892882d0329d1e2598",
                 "shasum": ""
             },
             "require": {
@@ -119,7 +123,7 @@
             "require-dev": {
                 "symfony/phpunit-bridge": "^4.4 || ^5.1"
             },
-            "time": "2021-10-22T20:56:57+00:00",
+            "time": "2022-08-28T14:55:35+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -168,12 +172,12 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "2.4.0",
-            "version_normalized": "2.4.0.0",
+            "version": "2.4.3",
+            "version_normalized": "2.4.3.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/guzzlehttp/psr7/2.4.0/guzzlehttp-psr7-2.4.0.zip",
-                "reference": "13388f00956b1503577598873fffb5ae994b5737",
+                "url": "https://mirrors.tencent.com/repository/composer/guzzlehttp/psr7/2.4.3/guzzlehttp-psr7-2.4.3.zip",
+                "reference": "67c26b443f348a51926030c83481b85718457d3d",
                 "shasum": ""
             },
             "require": {
@@ -187,16 +191,20 @@
                 "psr/http-message-implementation": "1.0"
             },
             "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.4.1",
+                "bamarni/composer-bin-plugin": "^1.8.1",
                 "http-interop/http-factory-tests": "^0.9",
-                "phpunit/phpunit": "^8.5.8 || ^9.3.10"
+                "phpunit/phpunit": "^8.5.29 || ^9.5.23"
             },
             "suggest": {
                 "laminas/laminas-httphandlerrunner": "Emit PSR-7 responses"
             },
-            "time": "2022-06-20T21:43:11+00:00",
+            "time": "2022-10-26T14:07:24+00:00",
             "type": "library",
             "extra": {
+                "bamarni-bin": {
+                    "bin-links": true,
+                    "forward-command": false
+                },
                 "branch-alias": {
                     "dev-master": "2.4-dev"
                 }
@@ -441,22 +449,22 @@
         },
         {
             "name": "symfony/deprecation-contracts",
-            "version": "v2.5.2",
-            "version_normalized": "2.5.2.0",
+            "version": "v3.1.1",
+            "version_normalized": "3.1.1.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/symfony/deprecation-contracts/v2.5.2/symfony-deprecation-contracts-v2.5.2.zip",
-                "reference": "e8b495ea28c1d97b5e0c121748d6f9b53d075c66",
+                "url": "https://mirrors.tencent.com/repository/composer/symfony/deprecation-contracts/v3.1.1/symfony-deprecation-contracts-v3.1.1.zip",
+                "reference": "07f1b9cc2ffee6aaafcf4b710fbc38ff736bd918",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=8.1"
             },
-            "time": "2022-01-02T09:53:40+00:00",
+            "time": "2022-02-25T11:15:52+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "2.5-dev"
+                    "dev-main": "3.1-dev"
                 },
                 "thanks": {
                     "name": "symfony/contracts",
@@ -487,113 +495,57 @@
             "install-path": "../symfony/deprecation-contracts"
         },
         {
-            "name": "tencentcloud/common",
-            "version": "3.0.708",
-            "version_normalized": "3.0.708.0",
+            "name": "tencentcloud/tencentcloud-sdk-php",
+            "version": "3.0.1294",
+            "version_normalized": "3.0.1294.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TencentCloud/tencentcloud-sdk-php.git",
+                "reference": "0bd1cac2fb832230c056e81f0e0656d6d56d8d19"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/tencentcloud/common/3.0.708/tencentcloud-common-3.0.708.zip",
-                "reference": "bf4708cdc48668650bb6049209114f38d75fa97c",
+                "url": "https://api.github.com/repos/TencentCloud/tencentcloud-sdk-php/zipball/0bd1cac2fb832230c056e81f0e0656d6d56d8d19",
+                "reference": "0bd1cac2fb832230c056e81f0e0656d6d56d8d19",
                 "shasum": ""
             },
             "require": {
-                "guzzlehttp/guzzle": "^6.3||^7.0",
+                "guzzlehttp/guzzle": "^6.3 || ^7.0",
                 "php": ">=5.6.0"
             },
-            "time": "2022-08-23T08:34:50+00:00",
+            "require-dev": {
+                "phpunit/phpunit": "^9.5"
+            },
+            "time": "2025-01-02T20:07:27+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "TencentCloud\\": "./src/TencentCloud"
-                }
+                },
+                "classmap": [
+                    "src/QcloudApi/QcloudApi.php"
+                ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
             "authors": [
                 {
-                    "name": "tencentcloudapi",
+                    "name": "coolli",
                     "email": "tencentcloudapi@tencent.com",
                     "homepage": "https://cloud.tencent.com/document/sdk/PHP",
                     "role": "Developer"
                 }
             ],
             "description": "TencentCloudApi php sdk",
-            "homepage": "https://github.com/tencentcloud-sdk-php/common",
-            "install-path": "../tencentcloud/common"
-        },
-        {
-            "name": "tencentcloud/ess",
-            "version": "3.0.708",
-            "version_normalized": "3.0.708.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/tencentcloud/ess/3.0.708/tencentcloud-ess-3.0.708.zip",
-                "reference": "9b948b2735fac518683fce9fb6b8584bb839682d",
-                "shasum": ""
+            "homepage": "https://github.com/TencentCloud/tencentcloud-sdk-php",
+            "support": {
+                "issues": "https://github.com/TencentCloud/tencentcloud-sdk-php/issues",
+                "source": "https://github.com/TencentCloud/tencentcloud-sdk-php/tree/3.0.1294"
             },
-            "require": {
-                "tencentcloud/common": "3.0.708"
-            },
-            "time": "2022-08-23T09:09:37+00:00",
-            "type": "library",
-            "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "TencentCloud\\": "./src/TencentCloud"
-                }
-            },
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "tencentcloudapi",
-                    "email": "tencentcloudapi@tencent.com",
-                    "homepage": "https://github.com/tencentcloud-sdk-php/ess",
-                    "role": "Developer"
-                }
-            ],
-            "description": "TencentCloudApi php sdk ess",
-            "homepage": "https://github.com/tencentcloud-sdk-php/ess",
-            "install-path": "../tencentcloud/ess"
-        },
-        {
-            "name": "tencentcloud/essbasic",
-            "version": "3.0.708",
-            "version_normalized": "3.0.708.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/tencentcloud/essbasic/3.0.708/tencentcloud-essbasic-3.0.708.zip",
-                "reference": "f862cc006b5af99913813fa86dc49823b85b473c",
-                "shasum": ""
-            },
-            "require": {
-                "tencentcloud/common": "3.0.708"
-            },
-            "time": "2022-08-23T09:10:06+00:00",
-            "type": "library",
-            "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "TencentCloud\\": "./src/TencentCloud"
-                }
-            },
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "tencentcloudapi",
-                    "email": "tencentcloudapi@tencent.com",
-                    "homepage": "https://github.com/tencentcloud-sdk-php/essbasic",
-                    "role": "Developer"
-                }
-            ],
-            "description": "TencentCloudApi php sdk essbasic",
-            "homepage": "https://github.com/tencentcloud-sdk-php/essbasic",
-            "install-path": "../tencentcloud/essbasic"
+            "install-path": "../tencentcloud/tencentcloud-sdk-php"
         }
     ],
     "dev": true,
